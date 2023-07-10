@@ -2,7 +2,6 @@
 # include <stdio.h>
 # include "Knapsack.h"
 
-/* test data */
 extern unsigned num;
 extern OBJ object[];
 extern float knapsack;
@@ -11,7 +10,7 @@ int main() {
 	for ( unsigned i = 0; i < num; i ++ )
 		object[i].performance = object[i].value / object[i].weight;
 	sortObject(object, num);
-	/* make it */
+	
 	float wei, val;
 	for(unsigned i=0; i<num; i++) {
 		if(object[i].weight > knapsack) {
@@ -30,7 +29,6 @@ int main() {
 }
 
 void sortObject(OBJ obj[], unsigned n) {
-	/* make it! */
 	OBJ tmp;
 	for(int i=0; i<num; i++) {
 		for(int j=num; j>i; j--) {
